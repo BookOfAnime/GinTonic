@@ -15,6 +15,31 @@ const generateTONSymbolPath = () => {
   `;
 };
 
+const Gallery = () => {
+  const images = [
+    '/gallery1.jpg',
+    '/gallery2.jpg',
+    '/gallery3.jpg',
+    '/gallery4.jpg',
+    '/gallery5.jpg',
+    '/gallery6.jpg',
+  ];
+
+  return (
+    <section id="gallery" className="py-16 bg-zinc-800">
+      <h2 className="text-4xl font-bold mb-8 text-center text-[#0098EA]">GinTONic Gallery</h2>
+      <div className="overflow-hidden">
+        <div className="flex animate-scroll">
+          {images.concat(images).map((src, index) => (
+            <div key={index} className="w-64 h-64 flex-shrink-0 mx-2">
+              <img src={src} alt={`Gallery image ${index + 1}`} className="w-full h-full object-cover rounded-lg" />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
 const LandingPage = ({ onAnimationComplete }) => {
   const [fillLevel, setFillLevel] = useState(0);
 
@@ -45,6 +70,15 @@ const LandingPage = ({ onAnimationComplete }) => {
     Z
   `;
 
+  // Generate stable positions for ice cubes
+  const iceCubes = Array.from({ length: 5 }, (_, i) => ({
+    x: 100 + Math.random() * 200,
+    y: 150 + Math.random() * 200,
+    size: 20 + Math.random() * 15,
+    rotation: Math.random() * 360,
+    bobDuration: 3 + Math.random() * 2
+  }));
+
   return (
     <div className="fixed inset-0 flex flex-col items-center justify-center z-50 overflow-hidden">
       {/* Background Image */}
@@ -57,7 +91,7 @@ const LandingPage = ({ onAnimationComplete }) => {
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
       
       <div className="relative z-10 text-center max-w-2xl w-full px-4">
-        <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-[#0098EA] mb-8 font-custom">GinTONic</h1>
+        <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-[#0098EA] mb-8 font-custom">GinTONic Coin</h1>
         <div className="relative w-full aspect-[1/1] max-w-lg mx-auto">
           <svg width="100%" height="100%" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid meet">
             <defs>
@@ -105,13 +139,13 @@ const LandingPage = ({ onAnimationComplete }) => {
               />
 
               {/* Ice cubes */}
-              {[...Array(7)].map((_, i) => (
-                <g key={i}>
-                  <path
-                    d={`M${100 + Math.random() * 200},${100 + Math.random() * 270 * (1 - fillLevel) + 370 * fillLevel} 
-                       l${15 + Math.random() * 15},${-8 - Math.random() * 8} 
-                       l${8 + Math.random() * 8},${15 + Math.random() * 8} 
-                       l${-23 - Math.random() * 15},${8 + Math.random() * 8} z`}
+              {iceCubes.map((cube, i) => (
+                <g key={i} transform={`translate(${cube.x}, ${cube.y}) rotate(${cube.rotation})`}>
+                  <rect
+                    x={-cube.size / 2}
+                    y={-cube.size / 2}
+                    width={cube.size}
+                    height={cube.size}
                     fill="rgba(255, 255, 255, 0.7)"
                     stroke="rgba(255, 255, 255, 0.9)"
                     strokeWidth="1"
@@ -119,22 +153,11 @@ const LandingPage = ({ onAnimationComplete }) => {
                     <animateTransform
                       attributeName="transform"
                       type="translate"
-                      from="0 0"
-                      to={`0 ${-8 - Math.random() * 8}`}
-                      dur={`${4 + Math.random() * 3}s`}
+                      values={`0,-2; 0,2; 0,-2`}
+                      dur={`${cube.bobDuration}s`}
                       repeatCount="indefinite"
-                      additive="sum"
                     />
-                    <animateTransform
-                      attributeName="transform"
-                      type="rotate"
-                      from="0 0 0"
-                      to={`${Math.random() < 0.5 ? '-' : ''}${2 + Math.random()}`}
-                      dur={`${4 + Math.random() * 3}s`}
-                      repeatCount="indefinite"
-                      additive="sum"
-                    />
-                  </path>
+                  </rect>
                 </g>
               ))}
             </g>
@@ -156,18 +179,42 @@ const Header = () => (
       </h1>
       <nav>
         <ul className="flex space-x-4">
-          {['About', 'Features', 'Invest'].map((item) => (
-            <li key={item}>
-              <a href={`#${item.toLowerCase()}`} className="hover:text-white transition-colors">
-                {item}
-              </a>
-            </li>
-          ))}
+          <li>
+            <a 
+              href="https://t.me/yourtelegramgroup" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="hover:text-white transition-colors"
+            >
+              Telegram
+            </a>
+          </li>
+          <li>
+            <a 
+              href="https://twitter.com/yourtwitter" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="hover:text-white transition-colors"
+            >
+              Twitter
+            </a>
+          </li>
+          <li>
+            <a 
+              href="https://yourexchange.com/buy" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="hover:text-white transition-colors"
+            >
+              Buy
+            </a>
+          </li>
         </ul>
       </nav>
     </div>
   </header>
 );
+
 
 const Feature = ({ icon, title, description }) => (
   <div className="bg-zinc-800 p-6 rounded-lg shadow-md">
