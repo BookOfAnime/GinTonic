@@ -27,7 +27,7 @@ const Gallery = () => {
   return (
     <section id="gallery" className="py-16 bg-zinc-800">
       <h2 className="text-4xl font-bold mb-8 text-center text-[#0098EA]">
-        GinTONic Gallery
+        Ginic Gallery
       </h2>
       <div className="overflow-hidden">
         <div className="flex animate-scroll">
@@ -97,7 +97,7 @@ const LandingPage = ({ onAnimationComplete }) => {
 
       <div className="relative z-10 text-center max-w-2xl w-full px-4">
         <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-[#0098EA] mb-8 font-custom">
-          Gin & TONic
+          Gin & Tonic
         </h1>
         <div className="relative w-full aspect-[1/1] max-w-lg mx-auto">
           <svg
@@ -212,7 +212,7 @@ const Header = () => (
     <div className="container mx-auto flex justify-between items-center">
       <h1 className="text-4xl font-extrabold flex items-center">
         <Martini className="mr-2" />
-        Gin & TONic
+        Gin & Tonic
       </h1>
       <nav>
         <ul className="flex space-x-4">
@@ -350,14 +350,14 @@ const App = () => {
 
               </h2>
               <button className="bg-[#0098EA] text-zinc-900 px-8 py-4 rounded-full text-2xl font-bold hover:bg-blue-400 transition-colors">
-               <a href="https://t.me/ginandton"> Pour Me a Gin & TONic!</a>
+               <a href="https://t.me/ginandton"> Pour Me a Gin & Tonic!</a>
               </button>
             </section>
           </div>
         </main>
         <footer className="bg-zinc-800 text-gray-300 text-center p-4 mt-12 border-t border-[#0098EA] relative z-10">
           <p>
-            © 2024 Gin & TONic Bar. Please invest responsibly. Don't drink and
+            © 2024 Gin & Tonic Bar. Please invest responsibly. Don't drink and
             trade!
           </p>
         </footer>
