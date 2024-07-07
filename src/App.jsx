@@ -175,7 +175,7 @@ const Header = () => (
     <div className="container mx-auto flex justify-between items-center">
       <h1 className="text-4xl font-extrabold flex items-center">
         <Martini className="mr-2" />
-        GinTONic 
+        Gin & TONic 
       </h1>
       <nav>
         <ul className="flex space-x-4">
@@ -260,11 +260,11 @@ const App = () => {
         <main className="container mx-auto px-4 py-12 relative z-10">
           <div className="max-w-3xl mx-auto">
             <section id="about" className="mb-16">
-              <h2 className="text-4xl font-bold mb-6 text-center text-[#0098EA]">Welcome to the GinTONic Bar</h2>
+              <h2 className="text-4xl font-bold mb-6 text-center text-[#0098EA]">Welcome to the Gin & TONic Bar</h2>
               <p className="text-xl text-center text-gray-300">
                 Where blockchain meets mixology! Our cryptocurrency is distilled to perfection, 
                 blending the smoothness of gin with the effervescence of blockchain technology. 
-                Invest in GinTONic Coin and watch your portfolio get spirited away!
+                Invest in Gin & TONic and watch your portfolio get spirited away!
               </p>
             </section>
             
@@ -291,13 +291,13 @@ const App = () => {
               <button 
                 className="bg-[#0098EA] text-zinc-900 px-8 py-4 rounded-full text-2xl font-bold hover:bg-blue-400 transition-colors"
               >
-                Pour Me a GinTONic!
+                Pour Me a Gin & TONic!
               </button>
             </section>
           </div>
         </main>
         <footer className="bg-zinc-800 text-gray-300 text-center p-4 mt-12 border-t border-[#0098EA] relative z-10">
-          <p>© 2024 GinTONic Coin Bar. Please invest responsibly. Don't drink and trade!</p>
+          <p>© 2024 Gin & TONic Bar. Please invest responsibly. Don't drink and trade!</p>
         </footer>
       </div>
     </>
