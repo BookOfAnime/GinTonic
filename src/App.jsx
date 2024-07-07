@@ -335,12 +335,12 @@ const App = () => {
               <Feature
                 icon={<TrendingUp size={48} />}
                 title="On the Rocks Growth"
-                description="Watch your investments climb steadily, like the perfect pour over ice."
+                description="The more you drink, the drunker you get. The drunker you get, the more you make!"
               />
               <Feature
                 icon={<Music size={48} />}
-                title="Mixology Mastery"
-                description="Join our staking program and become a master of financial mixology!"
+                title="Organically Sourced"
+                description="With a fair launch on Gas Pump, everyone gets a chance to buy and drink as much Gin and Tonic as they can handle."
               />
             </section>
 
