@@ -91,7 +91,7 @@ const LandingPage = ({ onAnimationComplete }) => {
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
       
       <div className="relative z-10 text-center max-w-2xl w-full px-4">
-        <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-[#0098EA] mb-8 font-custom">GinTONic Coin</h1>
+        <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-[#0098EA] mb-8 font-custom">Gin & TONic</h1>
         <div className="relative w-full aspect-[1/1] max-w-lg mx-auto">
           <svg width="100%" height="100%" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid meet">
             <defs>
