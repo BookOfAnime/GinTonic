@@ -181,7 +181,7 @@ const Header = () => (
         <ul className="flex space-x-4">
           <li>
             <a 
-              href="https://t.me/yourtelegramgroup" 
+              href="https://t.me/ginandton" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="hover:text-white transition-colors"
