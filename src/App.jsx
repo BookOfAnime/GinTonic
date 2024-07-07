@@ -191,7 +191,7 @@ const Header = () => (
           </li>
           <li>
             <a 
-              href="https://twitter.com/yourtwitter" 
+              href="https://x.com/GinOnTon" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="hover:text-white transition-colors"
